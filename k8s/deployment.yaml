@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: morning-brew-api
+  namespace: morning-brew
 spec:
   replicas: 1
   selector:
@@ -14,9 +15,28 @@ spec:
     spec:
       containers:
         - name: morning-brew-api
-          image: <your-docker-image> # Replace with your Docker image
+          image: your-docker-hub-username/morning-brew-api:latest
           ports:
             - containerPort: 3000
           env:
             - name: PORT
               value: "3000" # Or fetch from a ConfigMap or Secret
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 3000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
