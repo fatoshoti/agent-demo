@@ -29,4 +29,11 @@
     "@types/supertest": "^6.0.2",
     "ts-jest": "^29.2.3"
   }
-}
+},
+  "devDependencies": {
+    "cypress": "^13.0.0"
+  },
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:open": "cypress open"
+  }
