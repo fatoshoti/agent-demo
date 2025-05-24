@@ -23,6 +23,11 @@ const logger = winston.createLogger({
 
 app.use(bodyParser.json());
 
+// Healthcheck endpoint
+app.get('/healthz', (req: Request, res: Response) => {
+  res.status(200).send('OK');
+});
+
 // Centralized error handling middleware
 app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   logger.error(err.stack);
