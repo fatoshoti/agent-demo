@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: morning-brew-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: morning-brew-api
+  template:
+    metadata:
+      labels:
+        app: morning-brew-api
+    spec:
+      containers:
+        - name: morning-brew-api
+          image: <your-docker-image> # Replace with your Docker image
+          ports:
+            - containerPort: 3000
+          env:
+            - name: PORT
+              value: "3000" # Or fetch from a ConfigMap or Secret
