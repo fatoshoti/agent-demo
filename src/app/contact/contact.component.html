@@ -1,22 +1,27 @@
-<div class="container">
+<div class="contact-container">
   <h1>Contact Us</h1>
+
   <div class="map-container">
-    <!-- Google Maps will be embedded here -->
-    <p>Google Maps Placeholder</p>
+    <!-- Replace with your Google Maps embed code -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.973797419021!2d-0.12574068422022075!3d51.51494777963749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ca9e345c677%3A0x296c72a949a8e531!2sBuckingham%20Palace!5e0!3m2!1sen!2suk!4v1679579398457!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
+
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name">
     </div>
+
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email">
     </div>
+
     <div class="form-group">
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+      <textarea id="message" name="message"></textarea>
     </div>
+
     <button type="submit">Submit</button>
   </form>
 </div>

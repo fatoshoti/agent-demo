@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  imageUrls: string[] = [
-    'assets/image1.jpg',
-    'assets/image2.jpg',
-    'assets/image3.jpg',
-    'assets/image4.jpg',
-    'assets/image5.jpg',
-    'assets/image6.jpg'
+  imageUrls = [
+    'url1',
+    'url2',
+    'url3',
+    'url4',
+    'url5',
+    'url6'
   ];
 
   constructor() { }

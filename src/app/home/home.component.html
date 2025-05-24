@@ -1,3 +1,6 @@
-<div class="gallery">
-  <img *ngFor="let imageUrl of imageUrls" [src]="imageUrl" alt="Cafe Image">
+<div class="home-container">
+  <h1>Welcome to Morning Brew</h1>
+  <div class="gallery">
+    <img *ngFor="let url of imageUrls" [src]="url" alt="Cafe Image">
+  </div>
 </div>
