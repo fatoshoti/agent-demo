@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
 
 import { ContactComponent } from './contact.component';
 import { ContactService } from '../contact.service';
@@ -111,7 +111,7 @@ describe('ContactComponent', () => {
 
   it('should call contactService.submitContactForm and show error message on API error', () => {
     const errorResponse = { error: { message: 'Server error' }, status: 500 };
-    contactServiceSpy.submitContactForm.and.returnValue(new (class extends of<any> { override subscribe = (fn: any, errFn: any) => errFn(errorResponse); })());
+    contactServiceSpy.submitContactForm.and.returnValue(throwError(() => errorResponse));
 
     component.contactForm.setValue({
       name: 'John Doe',
