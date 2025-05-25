@@ -1,0 +1,9 @@
+.map-container iframe {
+  height: 400px; /* Adjust height as needed */
+}
+
+@media (min-width: 768px) {
+  .map-container iframe {
+    height: 100%; /* Make map fill available height on larger screens */
+  }
+}
