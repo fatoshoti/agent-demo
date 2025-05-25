@@ -17,7 +17,8 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "isolatedModules": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

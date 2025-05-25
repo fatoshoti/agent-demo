@@ -10,7 +10,6 @@
     "noFallthroughCasesInSwitch": true,
     "downlevelIteration": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
     "composite": true,
     "declaration": true,
