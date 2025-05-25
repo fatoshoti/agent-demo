@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* You can add your global styles here */
-body {
-  font-family: 'Arial', sans-serif;
-  @apply bg-gray-100 text-gray-900;
-}
