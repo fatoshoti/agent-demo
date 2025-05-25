@@ -1,57 +1,25 @@
-import { tsickle } from 'tsickle';
-
-interface TsConfig {
-  extends?: string;
-  compilerOptions: {
-    outDir: string;
-    esModuleInterop: boolean;
-    forceConsistentCasingInFileNames: boolean;
-    strict: boolean;
-    noImplicitReturns: boolean;
-    noFallthroughCasesInSwitch: boolean;
-    downlevelIteration: boolean;
-    resolveJsonModule: boolean;
-    isolatedModules: boolean;
-    noEmit: boolean;
-    composite: boolean;
-    declaration: boolean;
-    declarationMap: boolean;
-    inlineSources: boolean;
-    sourceMap: boolean;
-    allowSyntheticDefaultImports?: boolean;
-    target?: string;
-    module?: string;
-    lib?: string[];
-    types?: string[];
-  };
-  files?: string[];
-  include?: string[];
-  exclude?: string[];
-}
-
-const tsConfig: TsConfig = {
-  extends: './tsconfig.json',
-  compilerOptions: {
-    outDir: './out-tsc/app',
-    esModuleInterop: true,
-    forceConsistentCasingInFileNames: true,
-    strict: true,
-    noImplicitReturns: true,
-    noFallthroughCasesInSwitch: true,
-    downlevelIteration: true,
-    resolveJsonModule: true,
-    isolatedModules: true,
-    noEmit: true,
-    composite: true,
-    declaration: true,
-    declarationMap: true,
-    inlineSources: true,
-    sourceMap: true,
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "sourceMap": true
   },
-  exclude: [
-    'src/test.ts',
-    'src/**/*.spec.ts'
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
   ]
-};
-
-export default tsConfig;
+}
