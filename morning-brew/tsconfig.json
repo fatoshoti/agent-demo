@@ -1,4 +1,5 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -18,7 +19,8 @@
       "es2020",
       "dom"
     ],
-    "isolatedModules": false
+    "isolatedModules": false,
+    "composite": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
