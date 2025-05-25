@@ -1,0 +1,19 @@
+<div class="min-h-screen flex flex-col">
+  <header class="bg-amber-800 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+      <a routerLink="/" class="text-2xl font-bold">Morning Brew</a>
+      <ul class="flex space-x-4">
+        <li><a routerLink="/" routerLinkActive="text-amber-200" [routerLinkActiveOptions]="{exact: true}" class="hover:text-amber-300">Home</a></li>
+        <li><a routerLink="/contact" routerLinkActive="text-amber-200" class="hover:text-amber-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex-grow container mx-auto p-4">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="bg-amber-800 text-white p-4 text-center mt-8">
+    <p>&copy; {{ title }} 2024</p>
+  </footer>
+</div>
